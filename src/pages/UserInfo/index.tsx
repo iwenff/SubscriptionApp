@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../DS';
 import './index.scss';
-import { useState } from 'react';
 import { useForm } from '../../context/FormContext';
 
 const UserInfo = () => {
