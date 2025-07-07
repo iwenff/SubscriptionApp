@@ -1,0 +1,86 @@
+/* Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* For all ordered and unordered lists, turn off the decorations */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Elements <a> that do not have a class are reset to default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* For all elements <a>, turn off the decorations */
+a,
+a:hover {
+	text-decoration: none;
+}
+
+/* For all elements visited <a>, reset color */
+a:visited {
+	color: inherit;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Set the scroll behavior of all scrollable elements to smooth. */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	text-rendering: optimizeSpeed;
+	scroll-behavior: smooth;
+}
+
+#root {
+	min-height: 100vh;
+}
+
+/* remove all animations and transitions for people who prefer not to use them. */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+		transition: none;
+	}
+}

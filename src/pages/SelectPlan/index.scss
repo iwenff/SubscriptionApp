@@ -1,0 +1,112 @@
+.main{
+    position: relative;
+    width: 900px;
+    height: 600px;
+    background-color: white;
+    border-radius: 24px;
+    padding: 24px;
+}
+.content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 550px;
+  
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: flex-start; 
+  
+    gap: 12px; 
+    margin-right: 100px;
+    Button {
+      width: 100%;
+      height: 48px;
+      background-color: #022959;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  
+  
+
+}
+.planCon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.planBtn{
+    padding: 12px;
+    width: 140px;
+    height: 160px;
+    border: 1px solid #D6D9E6;
+    cursor: pointer;
+    border-radius: 16px;
+    h4{
+        margin-top: 40px;
+    }
+    p{
+        color: #9699AA;
+        font-size: 15px;
+    }
+
+    &:hover{
+        background-color: #F8F9FF;
+        border: 1px solid #483EFF;
+    }
+    &.selected{
+        background-color: #F8F9FF;
+        border: 1px solid #483EFF;
+    }
+}
+
+
+.billing-toggle {
+    display: flex;
+    width: 100%;
+    margin-top: 16px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9ff;
+    border-radius: 12px;
+    padding: 16px 24px;
+    gap: 16px;
+    font-weight: 600;
+    font-size: 16px;
+  
+    span {
+      color: #8a8a99;
+      transition: color 0.3s;
+      &.active {
+        color: #02295a; 
+      }
+    }
+  
+    .toggle {
+      width: 48px;
+      height: 24px;
+      border-radius: 9999px;
+      background-color: #02295a;
+      display: flex;
+      align-items: center;
+      padding: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      .circle {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: white;
+        transition: transform 0.3s ease;
+        transform: translateX(0);
+      }
+  
+      .right {
+        transform: translateX(24px);
+      }
+    }
+  }
+  
