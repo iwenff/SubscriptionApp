@@ -6,6 +6,14 @@ import { useForm } from '../../context/FormContext';
 const SelectPlan = () => {
   const { billingPlan, setBillingPlan, selectedPlan, setSelectedPlan } = useForm();
   const navigate = useNavigate();
+  const redirectIF = () => {
+    if (selectedPlan === null) {
+      alert('choose the plan');
+      return;
+    } else {
+      navigate('/addons');
+    }
+  };
 
   return (
     <div className="main">
@@ -50,7 +58,7 @@ const SelectPlan = () => {
         </div>
         <div style={{ display: 'flex', marginLeft: '-350px' }}>
           <Button onClick={() => navigate('/')}>Go Back</Button>
-          <Button onClick={() => navigate('/addons')} style={{ marginLeft: '250px' }}>
+          <Button onClick={redirectIF} style={{ marginLeft: '250px' }}>
             Next Step
           </Button>
         </div>

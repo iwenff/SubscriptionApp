@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 
 type BillingPlan = 'monthly' | 'yearly';
-type Plan = 'arcade' | 'advanced' | 'pro';
+type Plan = 'arcade' | 'advanced' | 'pro' | null;
 
 interface FormContextType {
   billingPlan: BillingPlan;
@@ -35,7 +35,7 @@ export const FormProvider = ({ children }: { children: React.ReactNode }) => {
   const saved = getInitialFormData();
 
   const [billingPlan, setBillingPlan] = useState<BillingPlan>(saved?.billingPlan || 'monthly');
-  const [selectedPlan, setSelectedPlan] = useState<Plan>(saved?.selectedPlan || 'arcade');
+  const [selectedPlan, setSelectedPlan] = useState<Plan>(saved?.selectedPlan || null);
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>(saved?.selectedAddOns || []);
   const [name, setName] = useState<string>(saved?.name || '');
   const [email, setEmail] = useState<string>(saved?.email || '');
